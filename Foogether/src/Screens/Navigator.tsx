@@ -22,11 +22,27 @@ import Profile from '~/Screens/Profile';
 import CustomDrawer from '~/Screens/Drawer';
 import mainProduct from './Product';
 import mainSpaceShared from './SpaceShared';
-import mainMyPage from './MyPage';
 import mainMeetings from './Meetings';
 import mainHome from './MainHome';
 import mainSearch from './Search';
 
+import MyProd from '~/Screens/MyProd';
+import MyMeet from '~/Screens/MyMeet';
+import MySpace from '~/Screens/MySpace';
+
+import MeetProgress from '~/Screens/MyMeet/MeetProgress';
+import MeetLike from '~/Screens/MyMeet/MeetLike';
+import MeetDone from '~/Screens/MyMeet/MeetDone';
+import MeetReview from '~/Screens/MyMeet/MeetReview';
+import ProdProgress from '~/Screens/MyProd/ProdProgress';
+import ProdLike from '~/Screens/MyProd/ProdLike';
+import ProdBuyList from '~/Screens/MyProd/ProdBuyList';
+import ProdReview from '~/Screens/MyProd/ProdReview';
+import SpaceProgress from '~/Screens/MySpace/SpaceProgress';
+import SpaceMyShare from '~/Screens/MySpace/SpaceMyShare';
+import SpaceLike from '~/Screens/MySpace/SpaceLike';
+import SpaceDone from '~/Screens/MySpace/SpaceDone';
+import SpaceReview from '~/Screens/MySpace/SpaceReview';
 
 
 
@@ -46,6 +62,7 @@ const LoginNavigator = () => {
   );
 };
 
+
 const MyFeedTab = () => {
   return (
     <Stack.Navigator>
@@ -57,6 +74,9 @@ const MyFeedTab = () => {
     </Stack.Navigator>
   );
 };
+
+
+
 
 const FeedsTab = () => {
   return (
@@ -101,9 +121,92 @@ const ProfileTab = () => {
         component={Profile}
         options={{title: 'Profile'}}
       />
+      <Stack.Screen
+          name="MyProd"
+          component={MyProd}
+          options={{title: 'Product'}}
+        />
+        <Stack.Screen
+          name="MyMeet"
+          component={MyMeet}
+          options={{title: '모임'}}
+        />
+         <Stack.Screen
+          name="MySpace"
+          component={MySpace}
+          options={{title: 'SpaceShared'}}
+        />
+        <Stack.Screen
+          name="MProgress"
+          component={MeetProgress} 
+          options={{title: '진행중인 모임'}}
+        />
+        <Stack.Screen
+          name="MLike"
+          component={MeetLike}
+          options={{title: '찜한 모임'}}
+        />
+
+        <Stack.Screen
+          name="MDone"
+          component={MeetDone}
+          options={{title: '완료된 모임'}}
+        />
+        <Stack.Screen
+          name="MReview"
+          component={MeetReview}
+          options={{title: '모임 후기'}}
+        />
+        <Stack.Screen
+          name="PProgress"
+          component={ProdProgress}
+          options={{title: '나의 판매글'}}
+        />
+        <Stack.Screen
+          name="PLike"
+          component={ProdLike}
+          options={{title: '나의 찜목록'}}
+        />
+        <Stack.Screen
+          name="PBuyList"
+          component={ProdBuyList}
+          options={{title: '나의 구매 목록'}}
+        />
+        <Stack.Screen
+          name="PReview"
+          component={ProdReview}
+          options={{title: '구매 후기'}}
+        />
+         <Stack.Screen
+          name="SProgress"
+          component={SpaceProgress}
+          options={{title: '예약한 공간'}}
+        />
+         <Stack.Screen
+          name="SMyShare"
+          component={SpaceMyShare}
+          options={{title: '내가 공유한 공간'}}
+        />
+         <Stack.Screen
+          name="SLike"
+          component={SpaceLike}
+          options={{title: '나의 찜한 공간'}}
+        />
+         <Stack.Screen
+          name="SDone"
+          component={SpaceDone}
+          options={{title: '완료된 공간'}}
+        />
+         <Stack.Screen
+          name="SReview"
+          component={SpaceReview}
+          options={{title: '공간 후기'}}
+        />
     </Stack.Navigator>
   );
 };
+
+
 
 //메인내비게이션이 될 탭 내비게이션을 다음과 같이 설정하였다.
 
@@ -206,6 +309,7 @@ const MainNavigator = () => {
     </Drawer.Navigator>
   );
 };
+
 
 export default () => {
   const {isLoading, userInfo} = useContext<IUserContext>(UserContext);

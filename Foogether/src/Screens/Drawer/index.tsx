@@ -43,7 +43,7 @@ const Drawer = ({props}: Props) => {
   return (
     <DrawerContentScrollView {...props}>
       <Header>
-        <Title>Sara Lambert</Title>
+        <Title>POPPI</Title>
       </Header>
       <Button>
         <ButtonContainer>

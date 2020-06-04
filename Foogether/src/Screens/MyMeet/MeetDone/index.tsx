@@ -22,25 +22,12 @@ import Tab from '~/Components/Tab';
 
 const Label = Styled.Text``;
 
-const mainProduct = () => {
+const MeetDone = () => {
   return (
     <Container>
-      <Label>This is Product</Label>
-      
-      <LabelContainer>
-          <ProfileItem>
-          <IconButton iconName="camera" />
-          </ProfileItem>
-          <ProfileItem>
-          <IconButton iconName="live" />
-          </ProfileItem>
-          <ProfileItem>
-         <IconButton iconName="camera" />
-          </ProfileItem>
-        </LabelContainer>
-
+      <Label>This is MDone</Label>
     </Container>
   );
 };
 
-export default mainProduct;
+export default MeetDone;

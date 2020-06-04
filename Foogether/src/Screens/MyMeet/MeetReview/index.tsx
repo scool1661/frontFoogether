@@ -1,6 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components/native';
 
+
+
 const Container = Styled.View`
   flex: 1;
   justify-content: center;
@@ -22,25 +24,12 @@ import Tab from '~/Components/Tab';
 
 const Label = Styled.Text``;
 
-const mainProduct = () => {
+const MeetReview = () => {
   return (
     <Container>
-      <Label>This is Product</Label>
-      
-      <LabelContainer>
-          <ProfileItem>
-          <IconButton iconName="camera" />
-          </ProfileItem>
-          <ProfileItem>
-          <IconButton iconName="live" />
-          </ProfileItem>
-          <ProfileItem>
-         <IconButton iconName="camera" />
-          </ProfileItem>
-        </LabelContainer>
-
+      <Label>This is MReview</Label>
     </Container>
   );
 };
 
-export default mainProduct;
+export default MeetReview;

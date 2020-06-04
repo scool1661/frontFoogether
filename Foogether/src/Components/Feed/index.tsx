@@ -53,7 +53,7 @@ const Feed = ({ id, name, photo, description, images }: Props) => {
           />
           <UserName>{name}</UserName>
         </ProfileContainer>
-        <IconButton iconName="dotMenu" />
+        <IconButton iconName="menu" />
       </FeedHeader>
       <FeedBody id={id} images={images} />
       <FeedFooter>

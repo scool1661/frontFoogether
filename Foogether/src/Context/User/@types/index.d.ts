@@ -10,3 +10,4 @@ interface IUserInfo {
     getUserInfo: () => void;
     logout: () => void;
   }
+

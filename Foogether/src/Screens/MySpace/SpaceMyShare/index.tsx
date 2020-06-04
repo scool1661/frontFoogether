@@ -22,25 +22,12 @@ import Tab from '~/Components/Tab';
 
 const Label = Styled.Text``;
 
-const mainProduct = () => {
+const SpaceMyShare = () => {
   return (
     <Container>
-      <Label>This is Product</Label>
-      
-      <LabelContainer>
-          <ProfileItem>
-          <IconButton iconName="camera" />
-          </ProfileItem>
-          <ProfileItem>
-          <IconButton iconName="live" />
-          </ProfileItem>
-          <ProfileItem>
-         <IconButton iconName="camera" />
-          </ProfileItem>
-        </LabelContainer>
-
+      <Label>This is SMyShare</Label>
     </Container>
   );
 };
 
-export default mainProduct;
+export default SpaceMyShare;
