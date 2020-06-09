@@ -14,7 +14,8 @@ import {DrawerActions} from '@react-navigation/native';
 import {RandomUserDataContext} from '~/Context/RandomUserData';
 import IconButton from '~/Components/IconButton';
 import IconButton2 from '~/Components/IconButton2';
-import IconButton3 from '~/Components/IconButton3';
+import IconButton4 from '~/Components/IconButton4';
+import IconButton5 from '~/Components/IconButton5';
 
 import ProfileHeader from './ProfileHeader';
 import ProfileBody from './ProfileBody';
@@ -75,6 +76,7 @@ const FeedContainer = Styled.View`
 const LabelContainer = Styled.TouchableOpacity`
   border-bottom-width: 1px;
   border-color: #c4c4c4;
+  width: 1300px;
 `;
 
 const LabelTitle = Styled.Text`
@@ -88,16 +90,9 @@ const LabelTitle = Styled.Text`
 
 const NextIcon = Styled.View`
   margin-left: 340px;
-  opacity: 0.4;
+  opacity: 0.3;
   margin-top: -25px;
-  
-
-  
-  
 `;
-
-
-
 
 
 
@@ -176,28 +171,16 @@ const Profile = ({navigation}: Props) => {
 
         <FeedContainer>
             <LabelContainer>
-              <LabelTitle>알림</LabelTitle>
-              <NextIcon>
-                <IconButton3 iconName="next" />
-              </NextIcon>
+              <IconButton4 onPress={() => {navigation.navigate('PushPage');}} iconName="next" label="알람" />
             </LabelContainer>
             <LabelContainer>
-              <LabelTitle>설정</LabelTitle>
-              <NextIcon>
-                <IconButton3 iconName="next" />
-              </NextIcon>
+              <IconButton4 onPress={() => {navigation.navigate('SettingPage');}} iconName="next" label="설정" />
             </LabelContainer>
             <LabelContainer>
-              <LabelTitle>문의하기</LabelTitle>
-              <NextIcon>
-                <IconButton3 iconName="next" />
-              </NextIcon>
+              <IconButton5 onPress={() => {navigation.navigate('Question');}} iconName="next" label="문의하기"/>
             </LabelContainer>
             <LabelContainer>
-              <LabelTitle>공지사항</LabelTitle>
-              <NextIcon>
-                <IconButton3 iconName="next" />
-              </NextIcon>
+              <IconButton5 onPress={() => {navigation.navigate('Notification')}} iconName="next" label="공지사항" />
             </LabelContainer>
         </FeedContainer>
     

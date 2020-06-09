@@ -32,4 +32,9 @@ type LoginNaviParamList = {
     SLike: undefined;
     SDone: undefined;
     SReview: undefined;
+    PushPage: undefined;
+    SettingPage: undefined;
+    Question: undefined;
+    Notification: undefined;
+    MyQuestion: undefined;
   };

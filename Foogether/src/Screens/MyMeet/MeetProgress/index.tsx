@@ -25,16 +25,23 @@ const Container = Styled.View`
 
 const LabelContainer = Styled.View`
   flex-direction: row;  
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   justify-content: center;
-  border: 1px;
+  border-bottom-width; 1px;
+  border-color: #363636;
+`;
+
+const LabelTitle0 = Styled.Text`
+  margin-bottom: 30px;
 `;
 
 const LabelTitle1 = Styled.Text`
   width : 100%;
-  font-size: 30px;
-  margin-top: 40px;  
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   textAlign: center;
+  
 
 `;
 
@@ -44,6 +51,7 @@ const MeetProgress = () => {
   return (
     <Container>
       <ScrollView>
+          <LabelTitle0>    </LabelTitle0>
       <LabelContainer>
         <LabelTitle1>진행중인 모임</LabelTitle1>
       </LabelContainer>

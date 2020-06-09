@@ -34,7 +34,7 @@ const LabelTitle = Styled.Text`
   margin-left: 20px;
   font-size: 20px;
   color: #5c5c5c;
-  border-color: #b0b0b0
+  border-color: #b0b0b0;
   
 `;
 
@@ -43,7 +43,7 @@ const NextIcon = Styled.View`
   margin-left: 345px;
   margin-bottom: -15px;
   margin-top: -25px;
-  opacity: 0.5;
+  opacity: 0.3;
 `;
 
 

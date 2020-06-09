@@ -17,7 +17,6 @@ import MyFeed from '~/Screens/MyFeed';
 import Feeds from '~/Screens/Feeds';
 import FeedListOnly from '~/Screens/FeedListOnly';
 import Upload from '~/Screens/Upload';
-import Notification from '~/Screens/Notification';
 import Profile from '~/Screens/Profile';
 import CustomDrawer from '~/Screens/Drawer';
 import mainProduct from './Product';
@@ -43,6 +42,11 @@ import SpaceMyShare from '~/Screens/MySpace/SpaceMyShare';
 import SpaceLike from '~/Screens/MySpace/SpaceLike';
 import SpaceDone from '~/Screens/MySpace/SpaceDone';
 import SpaceReview from '~/Screens/MySpace/SpaceReview';
+import PushPage from '~/Screens/PushPage';
+import SettingPage from '~/Screens/SettingPage';
+import Notification from '~/Screens/Notification';
+import QuestionPage from '~/Screens/QuestionPage';
+import MyQuestion from '~/Screens/QuestionPage/MyQuestion';
 
 
 
@@ -201,6 +205,31 @@ const ProfileTab = () => {
           name="SReview"
           component={SpaceReview}
           options={{title: '공간 후기'}}
+        />
+        <Stack.Screen
+          name="PushPage"
+          component={PushPage}
+          options={{title: '알림'}}
+        />
+        <Stack.Screen
+          name="SettingPage"
+          component={SettingPage}
+          options={{title: '설정'}}
+        />
+        <Stack.Screen
+          name="QuestionPage"
+          component={QuestionPage}
+          options={{title: '문의하기'}}
+        />
+        <Stack.Screen
+          name="Notification"
+          component={Notification}
+          options={{title: '공지사항'}}
+        />
+        <Stack.Screen
+          name="MyQuestion"
+          component={MyQuestion}
+          options={{title: '내 문의글'}}
         />
     </Stack.Navigator>
   );

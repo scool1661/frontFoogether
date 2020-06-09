@@ -1,46 +1,27 @@
-import React from 'react';
-import Styled from 'styled-components/native';
+import React, { useState } from "react";
+import { View, Switch, StyleSheet } from "react-native";
 
-const Container = Styled.View`
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-`;
+export default function App() {
+  const [isEnabled, setIsEnabled] = useState(true);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
-const LabelContainer = Styled.View`
-  flex-direction: row;
-`;
-
-const ProfileItem = Styled.View`
-  flex: 1;
-  align-items: center;
-`;
-
-import Input from '~/Components/Input';
-import IconButton from '~/Components/IconButton';
-import Tab from '~/Components/Tab';
-
-const Label = Styled.Text``;
-
-const mainProduct = () => {
   return (
-    <Container>
-      <Label>This is Product</Label>
-      
-      <LabelContainer>
-          <ProfileItem>
-          <IconButton iconName="camera" />
-          </ProfileItem>
-          <ProfileItem>
-          <IconButton iconName="live" />
-          </ProfileItem>
-          <ProfileItem>
-         <IconButton iconName="camera" />
-          </ProfileItem>
-        </LabelContainer>
-
-    </Container>
+    <View style={styles.container}>
+      <Switch
+        trackColor={{ false: "#767577", true: "#81b0ff" }}
+        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+        ios_backgroundColor="#3e3e3e"
+        onValueChange={toggleSwitch}
+        value={isEnabled}
+      />
+    </View>
   );
-};
+}
 
-export default mainProduct;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});

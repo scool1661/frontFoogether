@@ -31,7 +31,7 @@ const NextIcon = Styled.View`
   margin-left: 345px;
   margin-bottom: -15px;
   margin-top: -25px;
-  opacity: 0.5;
+  opacity: 0.3;
 `;
 
 
