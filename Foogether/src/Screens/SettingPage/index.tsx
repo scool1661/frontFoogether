@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {StackNavigationProp} from '@react-navigation/stack';
 import {View, Switch, StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native';
 import Styled from 'styled-components/native';
@@ -55,14 +56,11 @@ margin-left: 390px;
 opacity: 0.3;
 `;
 
-interface Props {
-  nickname: string;
-}
 
 
 
 
-export default function App() {
+export default function SettingPage() {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   console.log(isEnabled);

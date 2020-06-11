@@ -25,7 +25,7 @@ const Label = Styled.Text``;
 const ProdReview = () => {
   return (
     <Container>
-      <Label>This is MyQuestion</Label>
+      <Label>작성한 문의글이 없습니다.</Label>
     </Container>
   );
 };

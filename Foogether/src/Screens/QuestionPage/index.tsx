@@ -15,7 +15,7 @@ const Container = Styled.View``;
 
 const ProfileTabContainer = Styled.SafeAreaView`
   flex-direction: row;
-  background-color: #FEFFFF;
+  background-color: #c3c3c3;
 `;
 
 const Label = Styled.Text`

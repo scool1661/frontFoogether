@@ -1,4 +1,4 @@
-import React, {useState, useContext, useLayoutEffect, useEffect} from 'react';
+import React, {useState, useContext, useLayoutEffect, useEffect, Children} from 'react';
 import {
   NativeScrollEvent,
   Image,
@@ -10,6 +10,8 @@ import {
 import Styled from 'styled-components/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {DrawerActions} from '@react-navigation/native';
+import {StyleSheet} from 'react-native';
+
 
 import {RandomUserDataContext} from '~/Context/RandomUserData';
 import IconButton from '~/Components/IconButton';
@@ -17,18 +19,32 @@ import IconButton2 from '~/Components/IconButton2';
 import IconButton4 from '~/Components/IconButton4';
 import IconButton5 from '~/Components/IconButton5';
 
-import ProfileHeader from './ProfileHeader';
 import ProfileBody from './ProfileBody';
 import Input from '~/Components/Input';
 import Button from '~/Components/Button';
 import Tab from '~/Components/Tab';
 
 
+const ProfileImageContainer = Styled.View`
+  padding: 16px;
+  margin-bottom: -16px;
+`;
+
+const ProfileImage = Styled.Image`
+  border-radius: 100px;
+`;
+
 const ProfileItem = Styled.View`
 flex: 1;
 align-items: center;
-
 `;
+
+const ProfileContent = Styled.View`
+  flex: 1;
+  padding: 16px;
+  justify-content: space-around;
+`;
+
 
 const IconContainer = Styled.View`
 flex-direction: row;
@@ -79,13 +95,14 @@ const LabelContainer = Styled.TouchableOpacity`
   width: 1300px;
 `;
 
+const LabelContainers = Styled.TouchableOpacity`
+  border-color: #c4c4c4;
+`;
+
 const LabelTitle = Styled.Text`
   font-size: 20px;
-  color: #363636;
-  padding: 15px;
-  margin-left: 8px;
-  margin-top: 10px;
-  margin-bottom: -20px;
+  margin-top: -100px;
+  margin-left: 160px;
 `;
 
 const NextIcon = Styled.View`
@@ -97,18 +114,18 @@ const NextIcon = Styled.View`
 
 
 type NavigationProp = StackNavigationProp<ProfileTabParamList, 'Profile'>;
+
 interface Props {
+  image: string;
+  nickname: string;
   navigation: NavigationProp;
 }
 
-const Profile = ({navigation}: Props) => {
+
+const Profile = ({image, nickname, navigation}: Props) => {
   const {getMyFeed} = useContext(RandomUserDataContext);
   const [feedList, setFeedList] = useState<Array<IFeed>>([]);
   const imageWidth = Dimensions.get('window').width / 3;
-  const tabs = [
-    require('~/Assets/Images/ic_grid_image_focus.png'),
-    require('~/Assets/Images/ic_tag_image.png'),
-  ];
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -121,36 +138,37 @@ const Profile = ({navigation}: Props) => {
     });
   }, []);
 
-  useEffect(() => {
-    setFeedList(getMyFeed(24));
-  }, []);
-
-
-  const isBottom = ({
-    layoutMeasurement,
-    contentOffset,
-    contentSize,
-  }: NativeScrollEvent) => {
-    return layoutMeasurement.height + contentOffset.y >= contentSize.height;
-  };
-
-  const MyProd = ({})
-
+  const styles = StyleSheet.create({
+    container: {
+      backgroundColor: '#2c3e50',
+    },
+  });
 
   return (
     
-    <ScrollView
-      stickyHeaderIndices={[2]}
-      onScroll={(event: NativeSyntheticEvent<NativeScrollEvent>) => {
-        if (isBottom(event.nativeEvent)) {
-          setFeedList([...feedList, ...getMyFeed(24)]);
-        }
-      }}>
-      <ProfileHeader
-        image="http://api.randomuser.me/portraits/women/68.jpg"
-        nickname="POPPI"
-      />
-
+    <ScrollView>
+      <ProfileImageContainer>
+        <ProfileImage source={{uri: "http://api.randomuser.me/portraits/women/68.jpg"}} style={{width: 100, height: 100}} />
+      </ProfileImageContainer>
+      <ProfileContent>
+        <LabelContainers>
+            <LabelTitle>POPPI 님, 안녕하세요!</LabelTitle>
+        </LabelContainers>
+      </ProfileContent>    
+        <Button onPress={() => {navigation.navigate('EditProfile');}}
+          label="프로필 편집"
+          style={{
+            borderRadius: 4,
+            backgroundColor: '#FEFFFF',
+            borderWidth: 1,
+            borderColor: '#D3D3D3',
+            height: 30,
+            width: 200,
+            marginLeft: 160,
+            marginTop: -70,
+          }}
+          color="#292929"
+        />
       <IconContainer>
           <ProfileItem>
           <IconCombi1 >
@@ -177,7 +195,7 @@ const Profile = ({navigation}: Props) => {
               <IconButton4 onPress={() => {navigation.navigate('SettingPage');}} iconName="next" label="설정" />
             </LabelContainer>
             <LabelContainer>
-              <IconButton5 onPress={() => {navigation.navigate('Question');}} iconName="next" label="문의하기"/>
+              <IconButton5 onPress={() => {navigation.navigate('QuestionPage');}} iconName="next" label="문의하기"/>
             </LabelContainer>
             <LabelContainer>
               <IconButton5 onPress={() => {navigation.navigate('Notification')}} iconName="next" label="공지사항" />

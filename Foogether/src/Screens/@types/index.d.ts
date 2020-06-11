@@ -34,7 +34,9 @@ type LoginNaviParamList = {
     SReview: undefined;
     PushPage: undefined;
     SettingPage: undefined;
+    QuestionPage: undefined;
     Question: undefined;
     Notification: undefined;
     MyQuestion: undefined;
+    EditProfile: undefined;
   };

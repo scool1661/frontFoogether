@@ -46,7 +46,9 @@ import PushPage from '~/Screens/PushPage';
 import SettingPage from '~/Screens/SettingPage';
 import Notification from '~/Screens/Notification';
 import QuestionPage from '~/Screens/QuestionPage';
+import Question from '~/Screens/QuestionPage/Question';
 import MyQuestion from '~/Screens/QuestionPage/MyQuestion';
+import EditProfile from '~/Screens/EditProfile';
 
 
 
@@ -216,10 +218,20 @@ const ProfileTab = () => {
           component={SettingPage}
           options={{title: '설정'}}
         />
-        <Stack.Screen
+         <Stack.Screen
           name="QuestionPage"
           component={QuestionPage}
           options={{title: '문의하기'}}
+        />
+         <Stack.Screen
+          name="Question"
+          component={Question}
+          options={{title: '문의하기'}}
+        />
+         <Stack.Screen
+          name="MyQuestion"
+          component={MyQuestion}
+          options={{title: '내 문의글'}}
         />
         <Stack.Screen
           name="Notification"
@@ -227,9 +239,9 @@ const ProfileTab = () => {
           options={{title: '공지사항'}}
         />
         <Stack.Screen
-          name="MyQuestion"
-          component={MyQuestion}
-          options={{title: '내 문의글'}}
+          name="EditProfile"
+          component={EditProfile}
+          options={{title: '프로필 편집'}}
         />
     </Stack.Navigator>
   );

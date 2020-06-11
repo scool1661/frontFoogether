@@ -3,12 +3,15 @@ import Styled from 'styled-components/native';
 
 const Container = Styled.View`
   flex: 1;
-  justify-content: center;
-  align-items: center;
 `;
 
-const LabelContainer = Styled.View`
-  flex-direction: row;
+const LabelContainer = Styled.TouchableOpacity`
+  padding: 25px;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #FEFFFF;
+  border-radius: 4px;
 `;
 
 const ProfileItem = Styled.View`
@@ -16,16 +19,23 @@ const ProfileItem = Styled.View`
   align-items: center;
 `;
 
+const Label = Styled.Text`
+`;
+
 import Input from '~/Components/Input';
 import IconButton from '~/Components/IconButton';
 import Tab from '~/Components/Tab';
 
-const Label = Styled.Text``;
 
 const Notification = () => {
   return (
     <Container>
-      <Label>This is Notification</Label>
+      <LabelContainer>
+        <Label>06/11(목) 클라이언트 v.2.5.0 업데이트 안내</Label>
+      </LabelContainer>
+      <LabelContainer>
+        <Label>06/05(금) 악의적인 사용자 제재 안내</Label>
+      </LabelContainer>
 
     </Container>
   );
