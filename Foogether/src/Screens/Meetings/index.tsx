@@ -1,9 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-interface Props {
-  navigation: NavigationProp;
-}
 
 const Container = Styled.View`
   flex: 1;

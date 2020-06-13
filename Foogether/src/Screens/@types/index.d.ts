@@ -39,4 +39,10 @@ type LoginNaviParamList = {
     Notification: undefined;
     MyQuestion: undefined;
     EditProfile: undefined;
+    LoginStatus: undefined;
+    ProfileDetail: undefined;
+    Withdrawal: undefined;
+    DetailWd: undefined;
+    ChangePassword: undefined;
+    SetNewPw: undefined;
   };

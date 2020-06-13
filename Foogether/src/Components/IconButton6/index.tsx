@@ -2,37 +2,22 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 const Container = Styled.TouchableOpacity`
-  padding: 8px;
+  align-self: flex-end;
 `;
+
 const Icon = Styled.Image`
   width: 20px;
   height: 20px;
-  right: 5px;
-  bottom: 5px;
-  
+  opacity: 0.3;
+  top: -10px;
 `;
 
-
-const Label = Styled.Text`
-  color: #363636;
-  font-size: 20px;
-  margin-left: 20px;
-  padding: 10px;
-
-`;
-
-const LabelContainer = Styled.View`
-  flex-direction: row;
-`;
 
 const ProfileItem = Styled.View`
-  flex: 1;
-  align-items: center;
 `;
 
 
 interface Props {
-  label?: string;
   iconName:
     | 'camera'
     | 'live'
@@ -50,7 +35,7 @@ interface Props {
   onPress?: () => void;
 }
 
-const IconButton2 = ({ iconName, style, label, onPress }: Props) => {
+const IconButton6 = ({ iconName, style, onPress }: Props) => {
   const imageSource = {
     camera: require('~/Assets/Images/ic_camera.png'),
     live: require('~/Assets/Images/ic_live.png'),
@@ -74,18 +59,13 @@ const IconButton2 = ({ iconName, style, label, onPress }: Props) => {
           onPress();
         }
       }}>
-      <LabelContainer>
-        <Label>{label}</Label>
         <ProfileItem>
         <Icon source={imageSource[iconName]} />
         </ProfileItem>
-        <ProfileItem>
-        </ProfileItem>
-        </LabelContainer>
     </Container>
   );
 };
 
-export default IconButton2;
+export default IconButton6;
 
 

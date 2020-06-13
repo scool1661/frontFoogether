@@ -8,6 +8,7 @@ import Input from '~/Components/Input';
 
 const Container = Styled.View`
   flex: 1;
+  background-color: #FFFFFF;
   align-items: center;
   justify-content: center;
 `;

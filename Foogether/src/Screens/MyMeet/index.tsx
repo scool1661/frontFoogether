@@ -17,16 +17,19 @@ const MyMeetTabContaienr = Styled.View`
 
 const Container = Styled.View`
 flex: 1;
-justify-content: center;
+background-color: #FFFFFF;
 align-items: center;
 `;
 
 const FeedContainer = Styled.View`
+
+  background-color: #FFFFFF;
 `;
 
 const LabelContainer = Styled.TouchableOpacity`
+
   border-bottom-width: 1px;
-  border-color: #b0b0b0;
+  border-color: #e3e3e3;
 `;
 
 const LabelTitle = Styled.Text`
@@ -57,7 +60,8 @@ interface Props {
 const MyMeet = ({navigation}: Props) => {
 
   return (
-    <FeedContainer>
+    <Container>
+      <FeedContainer>
             <LabelContainer  onPress={() => {navigation.navigate('MProgress');}}>
               <LabelTitle>진행중인 모임</LabelTitle>
               <NextIcon>
@@ -83,6 +87,7 @@ const MyMeet = ({navigation}: Props) => {
                 </NextIcon>
             </LabelContainer>
         </FeedContainer>
+      </Container>
   );
 };
 

@@ -47,9 +47,13 @@ import SettingPage from '~/Screens/SettingPage';
 import Notification from '~/Screens/Notification';
 import QuestionPage from '~/Screens/QuestionPage';
 import Question from '~/Screens/QuestionPage/Question';
-import MyQuestion from '~/Screens/QuestionPage/MyQuestion';
 import EditProfile from '~/Screens/EditProfile';
-
+import LoginStatus from '~/Screens/SettingPage/LoginStatus';
+import ProfileDetail from '~/Screens/SettingPage/ProfileDetail';
+import Withdrawal from '~/Screens/SettingPage/ProfileDetail/Withdrawal';
+import DetailWd from '~/Screens/SettingPage/ProfileDetail/Withdrawal/DetailWd';
+import ChangePassword from '~/Screens/SettingPage/ProfileDetail/ChangePassword';
+import SetNewPw from '~/Screens/SettingPage/ProfileDetail/ChangePassword/SetNewPw';
 
 
 const Stack = createStackNavigator();
@@ -228,11 +232,6 @@ const ProfileTab = () => {
           component={Question}
           options={{title: '문의하기'}}
         />
-         <Stack.Screen
-          name="MyQuestion"
-          component={MyQuestion}
-          options={{title: '내 문의글'}}
-        />
         <Stack.Screen
           name="Notification"
           component={Notification}
@@ -242,6 +241,36 @@ const ProfileTab = () => {
           name="EditProfile"
           component={EditProfile}
           options={{title: '프로필 편집'}}
+        />
+        <Stack.Screen
+          name="LoginStatus"
+          component={LoginStatus}
+          options={{title: '로그인 정보'}}
+        />
+        <Stack.Screen
+          name="ProfileDetail"
+          component={ProfileDetail}
+          options={{title: '내 계정 설정'}}
+        />
+        <Stack.Screen
+          name="Withdrawal"
+          component={Withdrawal}
+          options={{title: '회원 탈퇴'}}
+        />
+        <Stack.Screen
+          name="DetailWd"
+          component={DetailWd}
+          options={{title: '회원 탈퇴'}}
+        />
+        <Stack.Screen
+          name="ChangePassword"
+          component={ChangePassword}
+          options={{title: '비밀번호 설정'}}
+        />
+        <Stack.Screen
+          name="SetNewPw"
+          component={SetNewPw}
+          options={{title: '비밀번호 설정'}}
         />
     </Stack.Navigator>
   );

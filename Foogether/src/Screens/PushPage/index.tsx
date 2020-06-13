@@ -10,7 +10,7 @@ import Styled from 'styled-components/native';
 
 import {RandomUserDataContext} from '~/Context/RandomUserData';
 import Tab from '~/Components/Tab';
-import NotificationList from './PushList';
+import PushList from './PushList';
 
 const ProfileTabContainer = Styled.SafeAreaView`
   flex-direction: row;
@@ -18,6 +18,7 @@ const ProfileTabContainer = Styled.SafeAreaView`
 `;
 
 const TabContainer = Styled.View`
+  background-color: #FFFFFF;
   width: 100%;
   height: ${Dimensions.get('window').height}px;
 `;
@@ -40,7 +41,7 @@ const PushPage = ({}: Props) => {
       <ScrollView
         
         contentOffset={{x: width, y: 0}}>
-        <NotificationList
+        <PushList
           id={0}
           width={width}
           data={followingList}

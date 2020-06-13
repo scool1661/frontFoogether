@@ -3,6 +3,7 @@ import Styled from 'styled-components/native';
 
 const Container = Styled.View`
   flex: 1;
+  background-color: #FFFFFF;
 `;
 
 const LabelContainer = Styled.TouchableOpacity`
@@ -10,7 +11,7 @@ const LabelContainer = Styled.TouchableOpacity`
   margin-top: 16px;
   margin-left: 10px;
   margin-right: 10px;
-  background-color: #FEFFFF;
+  background-color: #f7f7f7;
   border-radius: 4px;
 `;
 

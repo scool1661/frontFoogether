@@ -14,6 +14,7 @@ const TabContainer = Styled.View`
 
 const Container = Styled.View`
   flex: 1;
+  background-color: #FFFFFF;
   align-items: center;
   flex-direction: column;
 `;
@@ -60,13 +61,13 @@ const LabelTitle = Styled.Text`
 
 const LabelBox = Styled.View`
   width: 92%;
-  background-color: #e6e8eb;
+  background-color: #ffedd6;
   border-radius: 4px;
   margin-top: 10px;
   margin-left: 25px;
   margin-right: 25px;
   border: 1px;
-  border-color: #c4c4c4;
+  border-color: #FFFFFF;
 `;
 
 const Label = Styled.Text`
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
           <View style={styles.container}>
           <Picker
             selectedValue={selectedValue}
-            style={{ width: 300, height: 50, marginTop: -50 }}
+            style={{ width: 300, height: 50, marginTop: -50, textAlign: 'center'}}
             onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
           >
             <Picker.Item label="계정문의" value="계정문의" />

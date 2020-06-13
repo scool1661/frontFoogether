@@ -9,12 +9,17 @@ import Button from '~/Components/Button';
 import Tab from '~/Components/Tab';
 import { NavigationContainer } from '@react-navigation/native';
 
+const Container = Styled.View`
+  flex: 1;
+  background-color: #ffffff;
+`;
+
 const FeedContainer = Styled.View`
 `;
 
 const LabelContainer = Styled.TouchableOpacity`
   border-bottom-width: 1px;
-  border-color: #b0b0b0;
+  border-color: #e3e3e3;
 `;
 
 const LabelTitle = Styled.Text`
@@ -45,6 +50,7 @@ interface Props {
 const MyProd = ({navigation}: Props) => {
 
   return (
+    <Container>
     <FeedContainer>
             <LabelContainer  onPress={() => {navigation.navigate('PProgress');}}>
               <LabelTitle>나의 판매글</LabelTitle>
@@ -71,6 +77,7 @@ const MyProd = ({navigation}: Props) => {
                 </NextIcon>
             </LabelContainer>
         </FeedContainer>
+        </Container>
   );
 };
 
