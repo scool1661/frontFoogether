@@ -10,11 +10,8 @@ import Styled from 'styled-components/native';
 
 import {RandomUserDataContext} from '~/Context/RandomUserData';
 import Tab from '~/Components/Tab';
-<<<<<<< HEAD
-import PushList from '~/Screens/PushPage/PushList';
-=======
+
 import PushList from './PushList';
->>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 
 const ProfileTabContainer = Styled.SafeAreaView`
   flex-direction: row;
