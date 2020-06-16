@@ -6,6 +6,7 @@ import Button from '~/Components/Button';
 
 const Container = Styled.View`
   flex: 1;
+<<<<<<< HEAD
   background-color: #ffffff;
 `;
 
@@ -27,11 +28,19 @@ const ButtonContainer = Styled.View`
 const LabelTitle = Styled.Text`
   font-size: 18px;  
 `;
+=======
+`;
+
+const LabelContainer = Styled.View``;
+
+const LabelTitle = Styled.Text``;
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 
 const Label = Styled.Text``;
 
 type NavigationProp = StackNavigationProp<ProfileTabParamList, 'Profile'>
 
+<<<<<<< HEAD
 interface Props {
   navigation: NavigationProp;
 }
@@ -67,6 +76,12 @@ const SetNewPw = ({navigation}: Props) => {
             onPress={()=> {navigation.navigate('ReLogin');}}
           />
           </ButtonContainer>
+=======
+const SetNewPw = () => {
+
+    return (
+        <Container>
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
         </Container>
     );
 };

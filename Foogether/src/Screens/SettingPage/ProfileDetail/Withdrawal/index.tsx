@@ -23,6 +23,10 @@ const InputContainer = Styled.View`
 `;
 
 const ButtonContainer = Styled.View`
+<<<<<<< HEAD
+=======
+  top: 100px;
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
   align-items: center;
 `;
 
@@ -62,7 +66,11 @@ const Withdrawal = ({navigation}: Props) => {
             <ButtonContainer>
             <Button
                 label="다음"
+<<<<<<< HEAD
                 style={{width: 150, height: 45, marginTop: 100}}                
+=======
+                style={{width: 150, height: 45}}                
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
                 onPress={() => {navigation.navigate('DetailWd');}}
             />
             </ButtonContainer>

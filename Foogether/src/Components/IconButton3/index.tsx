@@ -7,6 +7,12 @@ const Container = Styled.TouchableOpacity`
 const Icon = Styled.Image`
   width: 20px;
   height: 20px;
+<<<<<<< HEAD
+=======
+  right: 5px;
+  bottom: 5px;
+  
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 `;
 
 

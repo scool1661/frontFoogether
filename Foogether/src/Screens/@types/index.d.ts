@@ -38,6 +38,7 @@ type LoginNaviParamList = {
     QuestionPage: undefined;
     MyQuestion: undefined;
     EditProfile: undefined;
+<<<<<<< HEAD
     ProfileDetail: undefined;
     ChangePassword: undefined;
     SetNewPw: undefined;
@@ -56,3 +57,12 @@ type LoginNaviParamList = {
     LocationPrivacy: undefined;
     OpensourceLicense: undefined;
   };
+=======
+    LoginStatus: undefined;
+    ProfileDetail: undefined;
+    Withdrawal: undefined;
+    DetailWd: undefined;
+    ChangePassword: undefined;
+    SetNewPw: undefined;
+  };
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4

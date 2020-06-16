@@ -79,26 +79,54 @@ const ProfileDetail = ({navigation}: Props) => {
   return (
     <Container>
 
+<<<<<<< HEAD
         <LabelContainer onPress={() => {navigation.navigate('PhoneNum');}}>
             <Label>전화번호</Label>
+=======
+        <LabelContainer>
+            <Label>연락처</Label>
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
             <SubLabelContainer>
                 <SubLabel>010-9508-2490</SubLabel>
             </SubLabelContainer>
         <ButtonController1>
+<<<<<<< HEAD
             <IconButton6 onPress={() => {navigation.navigate('PhoneNum');}} iconName="next" />
         </ButtonController1>
         </LabelContainer>
 
         <LabelContainer onPress={() => {navigation.navigate('Email');}}>
+=======
+            <IconButton6 iconName="next" />
+        </ButtonController1>
+        </LabelContainer>
+
+        <LabelContainer>
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
             <Label>이메일</Label>
             <SubLabelContainer>
                 <SubLabel>wlswhr160@naver.com</SubLabel>
             </SubLabelContainer>
         <ButtonController1>
+<<<<<<< HEAD
             <IconButton6 onPress={() => {navigation.navigate('Email');}} iconName="next" />
         </ButtonController1>
         </LabelContainer>
 
+=======
+            <IconButton6 iconName="next" />
+        </ButtonController1>
+        </LabelContainer>
+
+        <LabelContainer>
+            <Label>SNS 연동</Label>
+            <ButtonController2>
+                <IconButton6 iconName="next" />
+            </ButtonController2>
+        </LabelContainer>
+
+        <Label></Label>
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 
         <LabelContainer onPress={() => {navigation.navigate('ChangePassword');}}>
             <Label>비밀번호 변경</Label>

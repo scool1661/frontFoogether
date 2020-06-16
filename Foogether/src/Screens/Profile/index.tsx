@@ -194,7 +194,7 @@ const Profile = ({image, nickname, navigation}: Props) => {
 
         <FeedContainer>
             <LabelContainer>
-              <IconButton4 onPress={() => {navigation.navigate('PushPage');}} iconName="next" label="알람" />
+              <IconButton4 onPress={() => {navigation.navigate('PushPage');}} iconName="next" label="알림" />
             </LabelContainer>
             <LabelContainer>
               <IconButton4 onPress={() => {navigation.navigate('SettingPage');}} iconName="next" label="설정" />

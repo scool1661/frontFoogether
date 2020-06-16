@@ -25,6 +25,10 @@ font-weight: bold;
 margin-top: 30px;
 margin-bottom: 10px;
 margin-left: 15px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 `;
 
 
@@ -59,13 +63,23 @@ opacity: 0.3;
 
 
 type NavigationProp = StackNavigationProp<ProfileTabParamList, 'Profile'>;
+<<<<<<< HEAD
+
+interface Props {
+  navigation: NavigationProp;
+}
+=======
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 
 interface Props {
   navigation: NavigationProp;
 }
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 export default function SettingPage({navigation}: Props) {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);

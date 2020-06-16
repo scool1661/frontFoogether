@@ -40,9 +40,15 @@ const IconButton6 = ({ iconName, style, onPress }: Props) => {
     camera: require('~/Assets/Images/ic_camera.png'),
     live: require('~/Assets/Images/ic_live.png'),
     next: require('~/Assets/Images/arrow_icon.png'),
+<<<<<<< HEAD
     prod: require('~/Assets/Images/restaurant.png'),
     meet: require('~/Assets/Images/location.png'),
     space: require('~/Assets/Images/calendar.png'),
+=======
+    prod: require('~/Assets/Images/Restau_icon.png'),
+    meet: require('~/Assets/Images/placeIcon.png'),
+    space: require('~/Assets/Images/calendar_icon.png'),
+>>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
     send: require('~/Assets/Images/ic_send.png'),
     dotMenu: require('~/Assets/Images/ic_dot_menu.png'),
     favorite: require('~/Assets/Images/Tabs/ic_favorite_outline.png'),
