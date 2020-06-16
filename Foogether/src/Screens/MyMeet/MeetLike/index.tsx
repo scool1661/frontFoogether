@@ -3,6 +3,7 @@ import Styled from 'styled-components/native';
 
 const Container = Styled.View`
   flex: 1;
+  background-color: #FFFFFF;
   justify-content: center;
   align-items: center;
 `;

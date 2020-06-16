@@ -24,6 +24,10 @@ import Input from '~/Components/Input';
 import Button from '~/Components/Button';
 import Tab from '~/Components/Tab';
 
+const Container = Styled.View`
+  flex: 1;
+  background-color: #FFFFFF;
+`;
 
 const ProfileImageContainer = Styled.View`
   padding: 16px;
@@ -35,8 +39,8 @@ const ProfileImage = Styled.Image`
 `;
 
 const ProfileItem = Styled.View`
-flex: 1;
-align-items: center;
+  flex: 1;
+  align-items: center;
 `;
 
 const ProfileContent = Styled.View`
@@ -51,7 +55,7 @@ flex-direction: row;
 margin-top: 30px;
 border: 0.5px;
 border-color: #c4c4c4
-background-color: #fcfcfc;
+background-color: #ffffff;
 padding: 10px;
 `;
 
@@ -91,7 +95,7 @@ const FeedContainer = Styled.View`
 
 const LabelContainer = Styled.TouchableOpacity`
   border-bottom-width: 1px;
-  border-color: #c4c4c4;
+  border-color: #ebebeb;
   width: 1300px;
 `;
 
@@ -146,6 +150,7 @@ const Profile = ({image, nickname, navigation}: Props) => {
 
   return (
     
+    <Container>
     <ScrollView>
       <ProfileImageContainer>
         <ProfileImage source={{uri: "http://api.randomuser.me/portraits/women/68.jpg"}} style={{width: 100, height: 100}} />
@@ -201,8 +206,8 @@ const Profile = ({image, nickname, navigation}: Props) => {
               <IconButton5 onPress={() => {navigation.navigate('Notification')}} iconName="next" label="공지사항" />
             </LabelContainer>
         </FeedContainer>
-    
     </ScrollView>
+    </Container>
   );
 };
 
