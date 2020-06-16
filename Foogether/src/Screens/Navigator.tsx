@@ -46,7 +46,6 @@ import PushPage from '~/Screens/PushPage';
 import SettingPage from '~/Screens/SettingPage';
 import Notification from '~/Screens/Notification';
 import QuestionPage from '~/Screens/QuestionPage';
-<<<<<<< HEAD
 import EditProfile from '~/Screens/EditProfile';
 import ProfileDetail from '~/Screens/SettingPage/ProfileDetail';
 import ChangePassword from '~/Screens/SettingPage/ProfileDetail/ChangePassword';
@@ -65,17 +64,7 @@ import TOS from '~/Screens/SettingPage/TOS';
 import PrivacyPolicy from '~/Screens/SettingPage/PrivacyPolicy';
 import LocationPrivacy from '~/Screens/SettingPage/LocationPrivacy';
 import OpensourceLicense from '~/Screens/SettingPage/OpensourceLicense';
-=======
-import Question from '~/Screens/QuestionPage/Question';
-import EditProfile from '~/Screens/EditProfile';
-import LoginStatus from '~/Screens/SettingPage/LoginStatus';
-import ProfileDetail from '~/Screens/SettingPage/ProfileDetail';
-import Withdrawal from '~/Screens/SettingPage/ProfileDetail/Withdrawal';
-import DetailWd from '~/Screens/SettingPage/ProfileDetail/Withdrawal/DetailWd';
-import ChangePassword from '~/Screens/SettingPage/ProfileDetail/ChangePassword';
-import SetNewPw from '~/Screens/SettingPage/ProfileDetail/ChangePassword/SetNewPw';
 
->>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -258,14 +247,6 @@ const ProfileTab = () => {
           component={EditProfile}
           options={{title: '프로필 수정'}}
         />
-<<<<<<< HEAD
-        <Stack.Screen
-          name="ProfileDetail"
-          component={ProfileDetail}
-          options={{title: '상세 설정'}}
-        />
-=======
->>>>>>> 97c51aa5fc43f4f10bb9a75577064b9398f518c4
         <Stack.Screen
           name="ChangePassword"
           component={ChangePassword}
