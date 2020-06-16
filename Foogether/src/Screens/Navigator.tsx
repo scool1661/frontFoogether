@@ -23,7 +23,6 @@ import mainProduct from './Product';
 import mainSpaceShared from './SpaceShared';
 import mainMeetings from './Meetings';
 import mainHome from './MainHome';
-import mainSearch from './Search';
 
 import MyProd from '~/Screens/MyProd';
 import MyMeet from '~/Screens/MyMeet';
@@ -328,34 +327,9 @@ const ProfileTab = () => {
           options={{title: '오픈소스 라이선스'}}
         />
         <Stack.Screen
-          name="LoginStatus"
-          component={LoginStatus}
-          options={{title: '로그인 정보'}}
-        />
-        <Stack.Screen
           name="ProfileDetail"
           component={ProfileDetail}
           options={{title: '내 계정 설정'}}
-        />
-        <Stack.Screen
-          name="Withdrawal"
-          component={Withdrawal}
-          options={{title: '회원 탈퇴'}}
-        />
-        <Stack.Screen
-          name="DetailWd"
-          component={DetailWd}
-          options={{title: '회원 탈퇴'}}
-        />
-        <Stack.Screen
-          name="ChangePassword"
-          component={ChangePassword}
-          options={{title: '비밀번호 설정'}}
-        />
-        <Stack.Screen
-          name="SetNewPw"
-          component={SetNewPw}
-          options={{title: '비밀번호 설정'}}
         />
     </Stack.Navigator>
   );
